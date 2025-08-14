@@ -1,3 +1,4 @@
+/* styles.css */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
@@ -9,12 +10,46 @@ body {
 }
 
 .dark-mode {
-  background-color: #1e1e1e;
-  color: #f0f0f0;
+  background-color: #1e1e1e !important;
+  color: #f0f0f0 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-/* Agrega más estilos según necesites */
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.player {
+  margin-top: 20px;
+}
+
+.voice-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+#file-name {
+  flex: 1;
+  min-width: 200px;
+}
+
+select, button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
