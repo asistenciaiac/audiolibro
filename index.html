@@ -1,25 +1,37 @@
-<div class="container">
-  <h1>Generador de Audiolibros</h1>
-  
-  <!-- Modo oscuro -->
-  <button id="dark-mode-toggle">🌙/☀️</button>
-  
-  <!-- Subida de archivos -->
-  <input type="file" id="file-input" accept=".txt">
-  <textarea id="text-content" placeholder="Pega tu texto aquí..."></textarea>
-  
-  <!-- Controles de voz -->
-  <div class="voice-controls">
-    <input type="text" id="file-name" placeholder="Nombre del audiolibro">
-    <select id="voice-select">
-      <option value="">Cargando voces...</option>
-    </select>
-    <button id="generate-btn">Generar Audiolibro</button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Audiolibros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Audiolibros</h1>
+    <button id="dark-mode-toggle">🌙/☀️</button>
+
+    <input type="file" id="file-input" accept=".txt">
+    <textarea id="text-content" placeholder="Pega tu texto aquí..."></textarea>
+
+    <div class="voice-controls">
+      <input type="text" id="file-name" placeholder="Nombre del audiolibro">
+      <select id="voice-select">
+        <option value="">Cargando voces...</option>
+      </select>
+      <button id="generate-btn">Generar Audiolibro</button>
+    </div>
+
+    <div class="player hidden">
+      <audio id="audio-player" controls></audio>
+      <button id="download-btn">Descargar MP3</button>
+    </div>
   </div>
-  
-  <!-- Reproductor -->
-  <div class="player hidden">
-    <audio id="audio-player" controls></audio>
-    <button id="download-btn">Descargar MP3</button>
-  </div>
-</div>
+
+  <!-- SCRIPTS - IMPORTANTE: ORDEN CORRECTO -->
+  <script src="voices.js"></script>
+  <script src="recorder.js"></script>
+  <script src="dark-mode.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
