@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; URL='https://iacuruguay.com'" />
-    <title>Redirigiendo...</title>
-  </head>
-  <body>
-    <p>Redirigiendo a <a href="https://iacuruguay.com">iacuruguay.com</a></p>
-  </body>
-</html>
+<div class="container">
+  <h1>Generador de Audiolibros</h1>
+  
+  <!-- Modo oscuro -->
+  <button id="dark-mode-toggle">🌙/☀️</button>
+  
+  <!-- Subida de archivos -->
+  <input type="file" id="file-input" accept=".txt">
+  <textarea id="text-content" placeholder="Pega tu texto aquí..."></textarea>
+  
+  <!-- Controles de voz -->
+  <div class="voice-controls">
+    <input type="text" id="file-name" placeholder="Nombre del audiolibro">
+    <select id="voice-select">
+      <option value="">Cargando voces...</option>
+    </select>
+    <button id="generate-btn">Generar Audiolibro</button>
+  </div>
+  
+  <!-- Reproductor -->
+  <div class="player hidden">
+    <audio id="audio-player" controls></audio>
+    <button id="download-btn">Descargar MP3</button>
+  </div>
+</div>
