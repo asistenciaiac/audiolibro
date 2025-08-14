@@ -4,7 +4,7 @@ let mediaRecorder;
 let audioBlob;
 
 function startRecording(text, voiceName) {
-  // Limpiar grabaciones anteriores
+  // Limpiar grabaciones anterioress
   audioChunks = [];
   
   // Usar Web Speech API
